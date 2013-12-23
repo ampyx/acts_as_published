@@ -24,6 +24,7 @@ module ActsAsPublished
           redirect_to :back, :notice => I18n.t('acts_as_published.notices.unpublished', :name => resource )
         end 
       end   
+      permit_params :published # , :published_at
     end
     
     def acts_as_published_columns

@@ -9,8 +9,6 @@ module ActsAsPublished
   
     module ClassMethods
       def acts_as_published
-        #attr_accessible :published # , :published_at
-        
         def published
           t = self.arel_table
           where(t[:published_at].not_eq(nil))
